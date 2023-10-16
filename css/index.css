@@ -1,7 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 .main {
@@ -9,6 +15,9 @@
 }
 
 .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -16,4 +25,110 @@
 	height: 75px;
 	padding: 10px 40px;
 	background-color: transparent;
+	transition: transform 0.5s, background-color 0.5s;
+}
+
+.right-section {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	height: 55px;
+	transform: translateY(-10%);
+}
+
+.nav-list {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+/* Add margin-right to the list items */
+.nav-list li {
+	margin-right: 30px; /* Adjust the spacing as needed */
+}
+
+.nav-list li:hover {
+	text-decoration: underline;
+}
+
+.nav-list li:first-child {
+	margin-left: 30px;
+}
+
+/* Adjust the last item to remove margin-right (optional) */
+.nav-list li:last-child {
+	margin-right: 0;
+}
+
+.nav-list a {
+	text-decoration: none;
+	font-family: "Roboto";
+	font-size: 16px;
+	color: white;
+}
+
+.left-section {
+	display: flex;
+	width: 30%;
+	align-items: center;
+}
+
+.search-box {
+	width: 100%;
+}
+.search-header {
+	position: relative;
+}
+
+.search-header .search-input {
+	border-left: transparent;
+	border-right: transparent;
+	border-top: transparent;
+	border-bottom: 1px solid white;
+	background-color: transparent;
+	padding: 10px;
+	padding-left: 28px;
+	width: calc(100% - 40px);
+	outline: none;
+}
+
+.search-header .search-input::placeholder {
+	font-size: 15px;
+}
+
+.search-header .search-btn {
+	position: absolute;
+	background-color: transparent;
+	color: white;
+	border: none;
+	float: left;
+	top: 5px;
+	font-size: 20px;
+}
+
+.search-header .search-btn:hover {
+	cursor: pointer;
+}
+
+.user-icon,
+.cart-icon {
+	font-size: 20px;
+	margin-right: 16px; /* Adjust the space between the icons */
+}
+
+.slider {
+	width: 100%;
+	overflow: hidden;
+}
+
+.slide {
+	display: none;
+}
+
+img {
+	width: 100%;
+	height: auto;
 }
