@@ -1,0 +1,125 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	overflow: hidden;
+}
+
+body {
+	font-family: "Blinker", sans-serif;
+}
+
+.main {
+	width: 100vw;
+}
+
+.navbar {
+	background: #fff;
+	box-shadow: 0 4px 5px -5px rgba(0, 0, 0, 0.23);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 20px;
+}
+
+.nav-container {
+	align-items: center;
+	display: flex;
+	height: 8rem;
+	justify-content: center;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+.logo-img {
+	cursor: pointer;
+	height: auto;
+	width: 6rem;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 12rem auto;
+	margin-bottom: 8rem;
+	max-width: 400px;
+}
+
+.login-title {
+	text-transform: uppercase;
+	font-size: 2rem;
+	margin-bottom: 3rem;
+}
+
+form input {
+	width: 100%;
+	line-height: 2rem;
+	margin-top: 0.4rem;
+	margin-bottom: 3rem;
+	padding: 1rem 0.5rem;
+	font-size: 1.2rem;
+}
+
+label {
+	font-size: 1.2rem;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+	font-size: 1.5rem;
+	font-weight: 500;
+	padding: 1rem 2rem;
+	text-transform: uppercase;
+}
+
+.text-signup {
+	margin-top: 1.4rem;
+	font-size: 1.4rem;
+}
+
+.text-signup a {
+	text-decoration: underline;
+	transition: all 0.2s ease-in;
+}
+
+.text-signup a:hover {
+	color: rgb(209, 39, 39);
+}
+
+button:hover {
+	background-color: #fff;
+	outline: 2px solid #000;
+	color: #000;
+}
+
+footer {
+	background-color: #000;
+	flex-direction: column;
+	height: 7rem;
+}
+
+.footer-links,
+footer {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.love {
+	color: #fff;
+	font-size: 1.5rem;
+	margin-top: 1rem;
+}
