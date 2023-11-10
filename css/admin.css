@@ -1,0 +1,114 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Blinker", sans-serif;
+}
+
+.main {
+	width: 100vw;
+}
+
+.navbar {
+	background: #fff;
+	box-shadow: 0 4px 5px -5px rgba(0, 0, 0, 0.23);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 20px;
+}
+
+.nav-container {
+	align-items: center;
+	display: flex;
+	height: 8rem;
+	justify-content: center;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+.logo-img {
+	cursor: pointer;
+	height: auto;
+	width: 6rem;
+}
+
+.table-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10rem auto;
+	margin-bottom: 4rem;
+	max-width: 1200px;
+	gap: 1rem;
+}
+
+.title {
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
+}
+
+table {
+	margin: 0 auto;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th,
+td {
+	padding: 5px;
+}
+
+th {
+	height: 4rem;
+	font-size: 1rem;
+}
+
+td {
+	height: 4rem;
+	font-size: 1rem;
+	vertical-align: middle;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+	font-size: 0.8rem;
+	font-weight: 500;
+	padding: 0.8rem 1.2rem;
+	text-transform: uppercase;
+	background-color: #ebeaea;
+}
+
+table button:hover {
+	background-color: #fff;
+	outline: 1px solid #000;
+	color: #000;
+}
+
+.title-btn {
+	background-color: #fff;
+	outline: 1px solid #000;
+	margin-bottom: 1rem;
+}
+
+.title-btn button {
+	padding: 1rem 2rem;
+	font-size: 1rem;
+	background-color: #fff;
+}
