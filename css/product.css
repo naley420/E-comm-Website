@@ -1,0 +1,297 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Blinker", sans-serif;
+}
+
+.main {
+	width: 100vw;
+}
+
+.navbar {
+	background: #fff;
+	box-shadow: 0 4px 5px -5px rgba(0, 0, 0, 0.23);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 20px;
+}
+
+.nav-container {
+	align-items: center;
+	display: flex;
+	height: 6rem;
+	justify-content: space-between;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+.logo-img {
+	cursor: pointer;
+	height: auto;
+	width: 5rem;
+}
+
+.nav-links {
+	display: flex;
+	font-size: 1.4rem;
+	gap: 2.5rem;
+	text-transform: uppercase;
+}
+
+.nav-links a {
+	color: #000;
+	text-decoration: none;
+}
+
+.notify {
+	background-color: #373737;
+	color: #fff;
+	font-size: 1.4rem;
+	left: 50%;
+	padding: 1rem 2rem;
+	position: absolute;
+	top: -100%;
+	-webkit-transform: translate(-50%);
+	transform: translate(-50%);
+	transition: top 1s ease;
+	z-index: 999999999;
+}
+
+.product-page-div {
+	padding-top: 8rem;
+}
+
+.product-div {
+	display: flex;
+	margin-bottom: 6rem;
+	position: relative;
+	width: 100%;
+}
+
+.spec,
+.specifications {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.specifications {
+	gap: 2rem;
+	height: 8rem;
+	margin-bottom: 6rem;
+}
+
+.spec {
+	background-color: #e5e5e5;
+	flex-direction: column;
+	padding: 2rem;
+}
+
+.spec-title {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.title-desc {
+	font-size: 1.3rem;
+}
+
+.product-big-name {
+	font-size: 2.4rem;
+	left: 50%;
+	position: absolute;
+	top: 8px;
+	-webkit-transform: translate(-50%);
+	transform: translate(-50%);
+}
+
+.product-left {
+	height: 100%;
+	padding-top: 5rem;
+	width: 50%;
+}
+
+.big-img {
+	display: flex;
+	height: 60%;
+	justify-content: center;
+	margin-left: 1rem;
+	width: 100%;
+}
+
+.big-img img {
+	height: 80%;
+	object-fit: cover;
+	width: 75%;
+}
+
+.product-right {
+	background-color: #e5e5e5;
+	height: 100%;
+	padding: 8rem 4rem 8rem;
+	width: 50%;
+}
+
+.product-spec {
+	font-size: 1.4rem;
+	line-height: 1.5;
+	margin-bottom: 5rem;
+}
+
+.product-quant {
+	align-items: center;
+	display: flex;
+	font-size: 1.6rem;
+	font-weight: 600;
+	justify-content: space-between;
+	margin-bottom: 3rem;
+}
+
+.product-btns {
+	border: 1px solid #000;
+	display: flex;
+}
+
+.product-btns button:first-child {
+	border-right: 1px solid #000;
+}
+
+.product-btns button {
+	background-color: #fff;
+	border: none;
+	color: #000;
+	cursor: pointer;
+	font-size: 1.6rem;
+	height: 3rem;
+	transition: all 0.2s;
+	width: 3rem;
+}
+
+.product-btns button:last-child {
+	border-left: 1px solid #000;
+}
+
+.product-btns p {
+	height: 3rem;
+	outline-offset: -2px;
+	padding-top: 10px;
+	text-align: center;
+	width: 4rem;
+}
+
+.atc-buy {
+	display: flex;
+	gap: 2rem;
+}
+
+.atc-buy button {
+	border: none;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: 700;
+	height: 4rem;
+	text-transform: uppercase;
+	transition: all 0.2s;
+	width: 50%;
+}
+
+.atc-btn {
+	background-color: initial;
+	border: 2px solid #000 !important;
+}
+
+.atc-btn:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.buy-btn {
+	background-color: #b6002c;
+	border: 2px solid #b6002c !important;
+	color: #fff;
+}
+
+.buy-btn:hover {
+	background-color: initial;
+	color: #b6002c;
+}
+
+.news {
+	align-items: center;
+	background-color: #191919;
+	display: flex;
+	flex-direction: column;
+	height: 12rem;
+	justify-content: center;
+}
+
+.news-text {
+	text-align: center;
+}
+
+.news h2 {
+	color: #fff;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+.news button,
+.news input {
+	border: none;
+	font-size: 1.2rem;
+	padding: 0.4rem;
+}
+
+.news input {
+	margin-right: 0.7rem;
+	outline: none;
+}
+
+.news button {
+	cursor: pointer;
+}
+
+footer {
+	background-color: #000;
+	flex-direction: column;
+	height: 12rem;
+}
+
+.footer-links,
+footer {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.footer-links {
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.footer-links a {
+	color: #fff;
+	font-size: 1.2rem;
+	text-decoration: none;
+}
+
+.love {
+	color: #fff;
+	font-size: 1.2rem;
+	margin-top: 2rem;
+}
