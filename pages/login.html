@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Blinker&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- NAVBAR START -->
     <div class="navbar">
@@ -20,6 +22,12 @@
         </div>
     </div>
     <!-- NAVBAR END -->
+
+    <!-- NOTIFY START -->
+    <div class="notify">
+        <p></p>
+    </div>
+    <!-- NOTIFY END -->
 
     <!-- LOGIN START -->
     <div class="login">
@@ -37,14 +45,19 @@
                     <input type="password" name="" id="password" placeholder="Password">
                 </form>
 
-                <button type="submit">Login</button>
+                <button id="submitButton" type="submit">Login</button>
 
                 <div class="text-signup">
-                    <p>You're new?    <a href="./register.html">Create an account</a></p>
+                    <p>You're new? <a href="./register.html">Create an account</a></p>
                 </div>
             </div>
         </div>
     </div>
     <!-- LOGIN END -->
+
+    <!-- SCRIPT START -->
+    <script src="../scripts/api/login.js"></script>
+    <!-- SCRIPT END -->
 </body>
+
 </html>

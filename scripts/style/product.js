@@ -11,15 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	const quantityElement = document.querySelector(".quantity");
-	const priceElement = document.querySelector(".product-price");
-
-	let productPrice = parseFloat(priceElement.innerHTML.replace("$", ""));
 
 	let quantity = 1;
 
 	function updateDisplay() {
 		quantityElement.textContent = quantity;
-		priceElement.textContent = `${productPrice * quantity}$`;
 	}
 
 	document

@@ -17,10 +17,24 @@ body {
 .navbar {
 	background: #fff;
 	box-shadow: 0 4px 5px -5px rgba(0, 0, 0, 0.23);
-	position: fixed;
+	/* position: fixed; */
 	top: 0;
 	width: 100%;
 	z-index: 100;
+}
+
+.notify {
+	background-color: #373737;
+	color: #fff;
+	font-size: 1.4rem;
+	left: 50%;
+	padding: 1rem 2rem;
+	position: absolute;
+	top: -100%;
+	-webkit-transform: translate(-50%);
+	transform: translate(-50%);
+	transition: top 1s ease;
+	z-index: 999999999;
 }
 
 .container {
@@ -53,6 +67,7 @@ a {
 	justify-content: center;
 	align-items: center;
 	margin: 8rem auto;
+	margin-top: 3rem;
 	margin-bottom: 6rem;
 	max-width: 400px;
 }
@@ -77,12 +92,16 @@ label {
 }
 
 button {
+	outline: 2px solid black;
 	border: none;
+	background-color: #fff;
 	cursor: pointer;
 	font-size: 1.2rem;
 	font-weight: 500;
 	padding: 0.7rem 1.4rem;
+	margin-top: 1rem;
 	text-transform: uppercase;
+	transition: all 0.2s ease-in;
 }
 
 .text-signup {
@@ -100,7 +119,6 @@ button {
 }
 
 button:hover {
-	background-color: #fff;
-	outline: 2px solid #000;
-	color: #000;
+	background-color: #000;
+	color: #fff;
 }
