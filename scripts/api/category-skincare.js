@@ -8,8 +8,7 @@ function loadProducts() {
       let output = "";
 
       for (let i = 0; i < products.length; i++) {
-        // let productId = i + 1;
-        if (products[i].categoryName == "Kitchen") {
+        if (products[i].categoryName == "Skincare") {
           let image_url = `../css/resources/products/product-${i + 1}.png`;
           output +=
             '<div class="product normal">' +

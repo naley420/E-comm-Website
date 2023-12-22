@@ -91,13 +91,16 @@ label {
 }
 
 button {
-	border: 1px solid black;
+	outline: 1.5px solid black;
+	border: none;
+	background-color: #fff;
 	cursor: pointer;
 	font-size: 1.2rem;
 	font-weight: 500;
 	padding: 0.7rem 1.4rem;
 	margin-top: 1rem;
 	text-transform: uppercase;
+	transition: all 0.2s ease-in;
 }
 
 .text-signup {
@@ -115,6 +118,6 @@ button {
 }
 
 button:hover {
-	background-color: #fff;
-	color: #000;
+	background-color: #000;
+	color: #fff;
 }

@@ -92,7 +92,7 @@ label {
 }
 
 button {
-	outline: 2px solid black;
+	outline: 1.5px solid black;
 	border: none;
 	background-color: #fff;
 	cursor: pointer;
