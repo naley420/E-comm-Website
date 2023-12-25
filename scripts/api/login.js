@@ -1,25 +1,6 @@
 document.getElementById('submitButton').addEventListener('click', sendLog);
 
 
-function getUserId(userObj, username) {
-  if (username == userObj.username)
-    localStorage.setItem("id", userObj.id);
-}
-
-function callAPIgetUser(id, username, getUserId) {
-  const xhttp = new XMLHttpRequest();
-
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      const userObj = JSON.parse(xhttp.responseText);
-      getUserId(userObj, username);
-    }
-  };
-  xhttp.open("GET", "http://localhost:8080/api/users/" + id, true);
-  xhttp.send();
-}
-
-
 function sendLog() {
   let usernameValue = document.getElementById('username').value;
   let passwordValue = document.getElementById('password').value;
@@ -39,13 +20,26 @@ function sendLog() {
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       let isLoggedIn = true;
+      const userResponse = JSON.parse(xhttp.responseText);
 
-      for (let i = 1; i < 20; i++)
-        callAPIgetUser(i, usernameValue, getUserId);
+      if (userResponse.id == 1) {
+        localStorage.setItem('isAdmin', 'true');
+      }
+      else {
+        localStorage.setItem('isAdmin', 'false');
+      }
 
       localStorage.setItem("loggedIn", isLoggedIn);
-      localStorage.setItem("username", usernameValue);
-      window.location.href = '../index.html';
+      localStorage.setItem("id", userResponse.id);
+      localStorage.setItem("username", userResponse.username);
+
+
+      if (localStorage.getItem("queue") == "true") {
+        window.location.href = "./product.html";
+      }
+      else {
+        window.location.href = '../index.html';
+      }
     }
     else {
       notifyDiv.style.top = "4rem";
@@ -61,4 +55,3 @@ function sendLog() {
   xhttp.setRequestHeader("Content-type", "application/json");
   xhttp.send(user);
 }
-

@@ -21,9 +21,10 @@
                     <a href="/"><img src="../css/resources/logo.png" alt="" class="logo-img"></a>
 
                     <div class="nav-links">
-                        <a href="/categories/all">categories</a>
-                        <a href="/cart">cart</a>
-                        <a href="./login.html">login</a>
+                        <a href="./category.html">categories</a>
+                        <a href="./cart.html" id="cartLink">cart</a>
+                        <a href="./login.html" id="loginLink">login</a>
+                        <a href="./login.html" id="logoutLink">logout</a>
                     </div>
                 </div>
             </div>
@@ -32,7 +33,7 @@
 
         <!-- NOTIFY START -->
         <div class="notify">
-            <p>Item has been added to the cart &nbsp; ✅</p>
+            <p>Item has been added to the cart</p>
         </div>
         <!-- NOTIFY END -->
 
@@ -40,20 +41,21 @@
         <div class="product-page-div">
             <div class="container">
                 <div class="product-div">
-                    <h3 class="product-big-name">Lamp Light Blue</h3>
+                    <h3 class="product-big-name"></h3>
 
                     <div class="product-left">
                         <div class="big-img">
-                            <img src="../css/resources/products/product-3.png" alt="product">
+                            <img src="" alt="product">
                         </div>
 
                     </div>
 
                     <div class="product-right">
                         <p class="product-spec">
-                            The Verner Panton Flowerpot , designed in 1968, was originally intended for the restaurant
-                            industry and Verner Panton exhibitions.
+
                         </p>
+
+                        <p class="product-stock"></p>
 
                         <div class="product-quant">
                             <p>Quantity</p>
@@ -65,7 +67,6 @@
                             </div>
 
                             <p class="product-price">
-                                79$
                             </p>
                         </div>
 
@@ -78,21 +79,21 @@
 
                 <div class="specifications">
                     <div class="spec">
-                        <p class="spec-title">Texture:</p>
+                        <p class="spec-title">Texture</p>
 
-                        <p class="title-desc">Plastic</p>
+                        <p class="title-desc product-texture"></p>
                     </div>
 
                     <div class="spec">
-                        <p class="spec-title">Weight:</p>
+                        <p class="spec-title">Weight</p>
 
-                        <p class="title-desc">2kg</p>
+                        <p class="title-desc product-weight"></p>
                     </div>
 
                     <div class="spec">
-                        <p class="spec-title">Size:</p>
+                        <p class="spec-title">Size</p>
 
-                        <p class="title-desc">15cm x 15cm</p>
+                        <p class="title-desc product-size"></p>
                     </div>
                 </div>
             </div>
@@ -132,6 +133,7 @@
         </div>
         <!-- PRODUCT END -->
 
+        <script src="../scripts/api/product.js"></script>
         <script src="../scripts/style/product.js"></script>
     </div>
 </body>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Product</title>
+  <link rel="stylesheet" href="../css/update-product.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Blinker&display=swap" rel="stylesheet">
+  <script src="../scripts/api/check.js"></script>
+
+</head>
+
+<body>
+  <!-- NAVBAR START -->
+  <div class="navbar">
+    <div class="container">
+      <div class="nav-container">
+        <a href="/"><img src="../css/resources/logo.png" alt="" class="logo-img"></a>
+
+        <div class="nav-links">
+          <a href="./category.html" id="categoryLink">categories</a>
+          <a href="./cart.html" id="cartLink">cart</a>
+          <a href="./login.html" id="loginLink">login</a>
+          <a href="./admin.html" id="adminLink">dashboard</a>
+          <a href="./login.html" id="logoutLink">logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- NAVBAR END -->
+
+  <!-- NOTIFY START -->
+  <div class="notify">
+    <p></p>
+  </div>
+  <!-- NOTIFY END -->
+
+  <!-- LOGIN START -->
+  <div class="login">
+    <div class="container">
+      <div class="form-container">
+        <div class="login-title">
+          <h2>update product</h2>
+        </div>
+
+        <form action="">
+          <label for="name">Name</label>
+          <input type="text" name="" id="name" placeholder="Username">
+
+          <label for="description">Description</label>
+          <input type="text" name="" id="description" placeholder="Description">
+
+          <label for="quantity">Quantity</label>
+          <input type="text" name="" id="quantity" placeholder="Quantity">
+
+          <label for="price">Price</label>
+          <input type="text" name="" id="price" placeholder="price">
+
+          <label for="texture">Texture</label>
+          <input type="text" name="" id="texture" placeholder="Texture">
+
+          <label for="weight">Weight</label>
+          <input type="text" name="" id="weight" placeholder="Weight">
+
+          <label for="size">Size</label>
+          <input type="text" name="" id="size" placeholder="Size">
+
+          <label for="category">Category</label>
+          <!-- <input type="text" name="" id="category" placeholder="Category"> -->
+          <br>
+          <select id="category">
+            <option value="Chairs" selected>Chairs</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Furnitures">Furnitures</option>
+            <option value="Kitchen">Kitchen</option>
+            <option value="Lamps">Lamps</option>
+            <option value="Skincare">Skincare</option>
+          </select>
+        </form>
+
+        <button id="submitButton" type="submit">update</button>
+
+      </div>
+    </div>
+  </div>
+  <!-- LOGIN END -->
+
+  <script src="../scripts/api/update-product.js"></script>
+  <script src="../scripts/style/index.js"></script>
+</body>
+
+</html>

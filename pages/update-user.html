@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="../css/update-user.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Blinker&display=swap" rel="stylesheet">
+  <script src="../scripts/api/check.js"></script>
+
+</head>
+
+<body>
+  <!-- NAVBAR START -->
+  <div class="navbar">
+    <div class="container">
+      <div class="nav-container">
+        <a href="/"><img src="../css/resources/logo.png" alt="" class="logo-img"></a>
+
+        <div class="nav-links">
+          <a href="./category.html" id="categoryLink">categories</a>
+          <a href="./cart.html" id="cartLink">cart</a>
+          <a href="./login.html" id="loginLink">login</a>
+          <a href="./admin.html" id="adminLink">dashboard</a>
+          <a href="./login.html" id="logoutLink">logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- NAVBAR END -->
+
+  <!-- NOTIFY START -->
+  <div class="notify">
+    <p></p>
+  </div>
+  <!-- NOTIFY END -->
+
+  <!-- REGISTER START -->
+  <div class="login">
+    <div class="container">
+      <div class="form-container">
+        <div class="login-title">
+          <h2>update user</h2>
+        </div>
+
+        <form action="">
+          <label for="username">Username</label>
+          <input type="text" name="" id="username" placeholder="Username">
+
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Email">
+
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Password">
+
+          <label for="phone">Phone Number</label>
+          <input type="text" name="phone" id="phone" placeholder="Phone Number">
+
+          <label for="address">Address</label>
+          <input type="text" name="address" id="address" placeholder="Address">
+        </form>
+
+        <button id="submitButton" type="submit">update</button>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- REGISTER END -->
+
+  <script src="../scripts/api/update-user.js"></script>
+  <script src="../scripts/style/index.js"></script>
+</body>
+
+</html>

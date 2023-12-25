@@ -1,11 +1,8 @@
 const loggedIn = localStorage.getItem('loggedIn');
-const isAdmin = localStorage.getItem('isAdmin');
 
 const loginLink = document.getElementById('loginLink');
 const logoutLink = document.getElementById('logoutLink');
 const cartLink = document.getElementById('cartLink');
-const adminLink = document.getElementById('adminLink');
-const categoryLink = document.getElementById('categoryLink');
 
 if (loggedIn == "true") {
   loginLink.classList.add('hidden');
@@ -17,19 +14,8 @@ if (loggedIn == "true") {
   logoutLink.classList.add('hidden');
 }
 
-if (isAdmin == "true") {
-  cartLink.classList.add('hidden');
-  categoryLink.classList.add('hidden');
-  adminLink.classList.remove('hidden');
-
-}
-else {
-  cartLink.classList.remove('hidden');
-  categoryLink.classList.remove('hidden');
-  adminLink.classList.add('hidden');
-}
-
 logoutLink.addEventListener("click", () => {
   localStorage.setItem('loggedIn', false);
   localStorage.setItem('isAdmin', false);
+
 })

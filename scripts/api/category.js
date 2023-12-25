@@ -17,7 +17,7 @@ function loadProducts() {
           '</div>' +
 
           '<div class="product-details">' +
-          '<p>' + products[i].name + '</p>' +
+          '<p class="product-name">' + products[i].name + '</p>' +
 
           '<p class="item-price">' +
           '' + products[i].price + '' +
@@ -35,3 +35,29 @@ function loadProducts() {
   xhttp.send();
 };
 
+function getProductId(productName) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      const products = JSON.parse(xhttp.responseText);
+      for (let i = 0; i < products.length; i++) {
+        if (productName == products[i].name) {
+          localStorage.setItem("productId", products[i].id);
+        }
+      }
+    }
+  }
+  xhttp.open("GET", "http://localhost:8080/api/products", true);
+  xhttp.send();
+}
+
+setTimeout(() => {
+  const allProducts = document.getElementsByClassName("product normal");
+
+  for (let i = 0; i < allProducts.length; i++) {
+    allProducts[i].addEventListener("click", () => {
+      const productName = allProducts[i].querySelector(".product-name").innerHTML;
+      getProductId(productName);
+    })
+  }
+}, 100);

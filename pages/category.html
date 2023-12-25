@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Blinker&display=swap" rel="stylesheet">
 </head>
 
+
+
 <body>
     <div class="main">
         <!-- NAVBAR START -->
@@ -21,9 +23,10 @@
                     <a href="/"><img src="../css/resources/logo.png" alt="" class="logo-img"></a>
 
                     <div class="nav-links">
-                        <a href="/pages/category.html">categories</a>
-                        <a href="/pages/cart.html">cart</a>
-                        <a href="./login.html">login</a>
+                        <a href="./category.html">categories</a>
+                        <a href="./cart.html" id="cartLink">cart</a>
+                        <a href="./login.html" id="loginLink">login</a>
+                        <a href="./login.html" id="logoutLink">logout</a>
                     </div>
                 </div>
             </div>
@@ -74,7 +77,51 @@
         <div class="proud-container">
             <div class="container">
                 <div class="products-grid">
+                    <!-- <div class="product normal">
+                        <a href="product.html">
+                            <div class="product-header">
+                                <img src="../css/resources/products/product-1.png" alt="">
+                            </div>
 
+                            <div class="product-details">
+                                <p class="product-name">Test</p>
+
+                                <p class="item-price">
+                                    89
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product normal">
+                        <a href="product.html">
+                            <div class="product-header">
+                                <img src="../css/resources/products/product-1.png" alt="">
+                            </div>
+
+                            <div class="product-details">
+                                <p class="product-name">Test</p>
+
+                                <p class="item-price">
+                                    89
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product normal">
+                        <a href="product.html">
+                            <div class="product-header">
+                                <img src="../css/resources/products/product-1.png" alt="">
+                            </div>
+
+                            <div class="product-details">
+                                <p class="product-name">Test</p>
+
+                                <p class="item-price">
+                                    89
+                                </p>
+                            </div>
+                        </a>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -112,7 +159,9 @@
         <!-- FOOTER END -->
     </div>
 
+    <script src="../scripts/style/category.js"></script>
     <script src="../scripts/api/category.js"></script>
 </body>
+
 
 </html>

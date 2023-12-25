@@ -1,38 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
-	const atcBtn = document.querySelector(".atc-btn");
-	const notifyDiv = document.querySelector(".notify");
+const loggedIn = localStorage.getItem('loggedIn');
 
-	atcBtn.addEventListener("click", function () {
-		notifyDiv.style.top = "2rem";
+const loginLink = document.getElementById('loginLink');
+const logoutLink = document.getElementById('logoutLink');
+const cartLink = document.getElementById('cartLink');
 
-		setTimeout(function () {
-			notifyDiv.style.top = "-100%";
-		}, 2000);
-	});
+if (loggedIn == "true") {
+	loginLink.classList.add('hidden');
+	cartLink.classList.remove('hidden');
+	logoutLink.classList.remove('hidden');
+} else {
+	loginLink.classList.remove('hidden');
+	cartLink.classList.add('hidden');
+	logoutLink.classList.add('hidden');
+}
 
-	const quantityElement = document.querySelector(".quantity");
+logoutLink.addEventListener("click", () => {
+	localStorage.setItem('loggedIn', false);
+	localStorage.setItem('isAdmin', false);
 
-	let quantity = 1;
+})
 
-	function updateDisplay() {
-		quantityElement.textContent = quantity;
-	}
-
-	document
-		.querySelector(".product-btns button:last-child")
-		.addEventListener("click", function () {
-			quantity++;
-			updateDisplay();
-		});
-
-	document
-		.querySelector(".product-btns button:first-child")
-		.addEventListener("click", function () {
-			if (quantity > 1) {
-				quantity--;
-				updateDisplay();
-			}
-		});
-
-	updateDisplay();
-});

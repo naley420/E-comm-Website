@@ -13,6 +13,10 @@ body {
 	width: 100vw;
 }
 
+.hidden {
+	display: none !important;
+}
+
 .navbar {
 	background: #fff;
 	box-shadow: 0 4px 5px -5px rgba(0, 0, 0, 0.23);
@@ -150,7 +154,14 @@ a {
 .product-spec {
 	font-size: 1.4rem;
 	line-height: 1.5;
-	margin-bottom: 5rem;
+	margin-bottom: 2rem;
+}
+
+.product-stock {
+	font-size: 1.4rem;
+	font-weight: 600;
+	line-height: 1.5;
+	/* margin-bottom: 1rem; */
 }
 
 .product-quant {

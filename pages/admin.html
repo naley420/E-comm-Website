@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Blinker&display=swap" rel="stylesheet">
+  <script src="../scripts/api/check.js"></script>
+</head>
+
+<body>
+  <!-- NAVBAR START -->
+  <div class="navbar">
+    <div class="container">
+      <div class="nav-container">
+        <a href="/"><img src="../css/resources/logo.png" alt="" class="logo-img"></a>
+
+        <div class="nav-links">
+
+          <a href="./login.html" id="loginLink">login</a>
+          <a href="./login.html" id="logoutLink">logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- NAVBAR END -->
+
+  <p class="title">User</p>
+
+  <div class="table">
+    <div class="table-header">
+      <p>User Details</p>
+      <div>
+        <button class="add-new user-add-btn">+ Add New</button>
+      </div>
+    </div>
+
+    <div class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody class="table-data">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <p class="title">Product</p>
+
+
+  <div class="table">
+    <div class="table-header">
+      <p>Product Details</p>
+      <div>
+        <button class="add-new product-add-btn">+ Add New</button>
+      </div>
+    </div>
+
+    <div class="table-section">
+      <table>
+        <colgroup>
+          <col>
+          <col>
+          <col>
+          <col class="wider-column">
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Product</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Size</th>
+            <th>Texture</th>
+            <th>Weight</th>
+            <th>Category</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody class="table-data">
+          <!-- <tr>
+            <td class="product-id">1</td>
+            <td class="product-img"><img src="../css/resources/products/product-1.png" alt="" srcset=""></td>
+            <td class="product-name">Little Armchair Sheepskin</td>
+            <td class="product-description">Tradition Little Petra VB1 Armchair Sheepskin Moonlight/ Walnut/ Brass
+              Limited Edition</td>
+            <td class="product-price">986</td>
+            <td class="product-quantity">18</td>
+            <td class="product-size">150cm x 70cm</td>
+            <td class="product-texture">Sheep Skin</td>
+            <td class="product-weight">15</td>
+            <td class="product-category">Chairs</td>
+            <td class="product-action">
+              <button class="product-update-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+              <button class="product-delete-btn"><i class="fa-solid fa-trash"></i></button>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="../scripts/style/admin.js"></script>
+  <script src="../scripts/api/admin.js"></script>
+</body>
+
+</html>
