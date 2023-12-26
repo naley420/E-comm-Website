@@ -60,4 +60,4 @@ setTimeout(() => {
       getProductId(productName);
     })
   }
-}, 100);
+}, 200);

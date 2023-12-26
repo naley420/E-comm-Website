@@ -93,7 +93,7 @@ a {
 }
 
 .product-side {
-	width: 60%;
+	width: 80%;
 	padding-top: 0rem;
 	display: flex;
 	flex-direction: column;
@@ -103,7 +103,7 @@ a {
 .product {
 	display: flex;
 	justify-content: space-between;
-	padding: 1rem 2rem;
+	padding: 1.5rem 2rem;
 	width: 100%;
 	outline: 1px solid black;
 }
@@ -142,7 +142,7 @@ a {
 	font-size: 1.6rem;
 	height: 2rem;
 	transition: all 0.2s;
-	width: 5rem;
+	width: 6rem;
 }
 
 .product-btns button:last-child {
@@ -155,7 +155,7 @@ a {
 	font-size: 1.3rem;
 	padding-top: 5px;
 	text-align: center;
-	width: 4.5rem;
+	width: 6rem;
 }
 
 .product-price {
@@ -186,6 +186,7 @@ a {
 
 .price-side {
 	width: 40%;
+	height: 500px;
 	display: flex;
 	flex-direction: column;
 	background-color: #e5e5e5;
@@ -221,23 +222,23 @@ a {
 	width: 8rem;
 }
 
-.btns .clear-btn {
+.btns #clear-btn {
 	background-color: initial;
 	border: 2px solid #000 !important;
 }
 
-.btns .clear-btn:hover {
+.btns #clear-btn:hover {
 	background-color: #000;
 	color: #fff;
 }
 
-.btns .buy-btn {
+.btns #buy-btn {
 	background-color: #b6002c;
 	border: 2px solid #b6002c !important;
 	color: #fff;
 }
 
-.btns .buy-btn:hover {
+.btns #buy-btn:hover {
 	background-color: initial;
 	color: #b6002c;
 }

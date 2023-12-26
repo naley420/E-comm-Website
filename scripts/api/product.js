@@ -7,8 +7,6 @@ const productTexture = document.getElementsByClassName("product-texture")[0];
 const productWeight = document.getElementsByClassName("product-weight")[0];
 const productSize = document.getElementsByClassName("product-size")[0];
 
-loadProduct(localStorage.getItem("productId"));
-
 let stock = 0;
 
 function loadProduct(id) {
@@ -30,21 +28,41 @@ function loadProduct(id) {
 
     }
   }
-
   xhttp.open("GET", "http://localhost:8080/api/products/" + id, true);
   xhttp.send();
 };
+
+function addToCart() {
+  var xhttp = new XMLHttpRequest();
+  const username = 'admin';
+  const password = 'admin';
+  const base64Credentials = btoa(username + ':' + password);
+
+  let url = `http://localhost:8080/api/carts/${userId}/products/${prodId}`;
+  xhttp.open("POST", url, true);
+  xhttp.setRequestHeader('Authorization', 'Basic ' + base64Credentials);
+  xhttp.send();
+}
+
+const prodId = localStorage.getItem("productId");
+const userId = localStorage.getItem("id");
+loadProduct(prodId);
 
 setTimeout(() => {
   const atcBtn = document.querySelector(".atc-btn");
   const buyBtn = document.querySelector(".buy-btn");
   const notifyDiv = document.querySelector(".notify");
 
-
   localStorage.setItem("queue", false);
   if (localStorage.getItem("loggedIn") == "true") {
     atcBtn.addEventListener("click", function () {
       notifyDiv.style.top = "2rem";
+
+      for (let i = 0; i < quantity; i++) {
+        setTimeout(() => {
+          addToCart();
+        }, 200);
+      }
 
       setTimeout(function () {
         notifyDiv.style.top = "-100%";
@@ -54,8 +72,16 @@ setTimeout(() => {
     buyBtn.addEventListener("click", function () {
       notifyDiv.style.top = "2rem";
 
-      setTimeout(function () {
-        notifyDiv.style.top = "-100%";
+      for (let i = 0; i < quantity; i++) {
+        setTimeout(() => {
+          addToCart();
+        }, 200);
+      }
+
+      document.title = 'Loading...';
+
+      setTimeout(() => {
+        window.location.href = "./cart.html";
       }, 2000);
     });
   }
@@ -97,7 +123,7 @@ setTimeout(() => {
     });
 
   updateDisplay();
-}, 100);
+}, 200);
 
 
 

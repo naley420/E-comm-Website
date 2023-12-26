@@ -1,5 +1,5 @@
 const loggedIn = localStorage.getItem('loggedIn');
-const isAdmin = localStorage.getItem('isAdmin');
+const checkAdmin = localStorage.getItem('isAdmin');
 
 const loginLink = document.getElementById('loginLink');
 const logoutLink = document.getElementById('logoutLink');
@@ -17,7 +17,7 @@ if (loggedIn == "true") {
   logoutLink.classList.add('hidden');
 }
 
-if (isAdmin == "true") {
+if (checkAdmin == "true") {
   cartLink.classList.add('hidden');
   categoryLink.classList.add('hidden');
   adminLink.classList.remove('hidden');
