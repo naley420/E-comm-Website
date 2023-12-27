@@ -83,7 +83,7 @@ function clearProduct() {
 
   setTimeout(() => {
     window.location.reload();
-  }, 200)
+  }, 200);
 };
 
 function removeProduct(id) {
@@ -106,6 +106,15 @@ function removeProduct(id) {
 
 function notifySuccess() {
   notifyMsg.innerHTML = "Buying successfully";
+  notifyDiv.style.top = "2rem";
+
+  setTimeout(function () {
+    notifyDiv.style.top = "-100%";
+  }, 2000);
+}
+
+function notifyFailure() {
+  notifyMsg.innerHTML = "Cart is empty";
   notifyDiv.style.top = "2rem";
 
   setTimeout(function () {
@@ -141,7 +150,14 @@ setTimeout(() => {
 
   totalPriceElement.innerHTML = `$ ${totalPrice}`;
 
-  clearBtn.addEventListener("click", clearProduct);
+  clearBtn.addEventListener("click", () => {
+    if (totalPrice == 0) {
+      notifyFailure();
+    }
+    else {
+      clearProduct();
+    }
+  });
 
   for (let i = 0; i < removeBtns.length; i++) {
     removeBtns[i].addEventListener('click', function (event) {
@@ -200,6 +216,14 @@ setTimeout(() => {
   }
 
   buyBtn.addEventListener("click", () => {
-    notifySuccess();
+    if (totalPrice == 0) {
+      notifyFailure();
+    }
+    else {
+      notifySuccess();
+      setTimeout(() => {
+        clearProduct();
+      }, 2000);
+    }
   });
 }, 200);

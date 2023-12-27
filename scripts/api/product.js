@@ -46,6 +46,8 @@ function addToCart() {
 
 const prodId = localStorage.getItem("productId");
 const userId = localStorage.getItem("id");
+console.log(prodId, userId);
+
 loadProduct(prodId);
 
 setTimeout(() => {
