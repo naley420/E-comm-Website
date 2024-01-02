@@ -42,8 +42,8 @@ function sendReg() {
 
         const responseText = xhttp.responseText;
         if (responseText == "Username is already registered" || responseText == "Email is already registered") {
-          notifyDiv.style.top = "2rem";
           notifyMsg.innerHTML = responseText;
+          notifyDiv.style.top = "2rem";
           setTimeout(function () {
             notifyDiv.style.top = "-100%";
           }, 4000);

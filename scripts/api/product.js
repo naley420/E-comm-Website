@@ -46,11 +46,13 @@ function addToCart() {
 
 const prodId = localStorage.getItem("productId");
 const userId = localStorage.getItem("id");
+
 console.log(prodId, userId);
 
-loadProduct(prodId);
 
 setTimeout(() => {
+  loadProduct(prodId);
+
   const atcBtn = document.querySelector(".atc-btn");
   const buyBtn = document.querySelector(".buy-btn");
   const notifyDiv = document.querySelector(".notify");
